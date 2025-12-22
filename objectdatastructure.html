@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            var student = {
+                name: 'Esther',
+                age: 15,
+                grade: 11,
+                hobbies: "Sports",
+                fav_sport: "Football:"
+
+            };
+            var color = ["red", "orange", "yellow", "green", "blue", "purple"];
+
+            document.write("Student name is: " + student.name, "<br>", "Student favourtie sport is:" + student.fav_sport);
+            document.write("<br>");
+            document.write("Before popping the colors are:" + color.join(" ^ "));
+            document.write("<br>");
+            document.write("My favourite color is:" + color[2]);
+            document.write("<br>");
+            color.pop();
+            document.write("After popping the colors are:" + color.join(" * "));
+        </script>
+    </body>
+</html>
