@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+
+        <button onclick="ascending()">Ascending Order</button>
+        <button onclick="descending()">Descending Order</button>
+
+        <p id="result_1"></p>
+        <p id="result_2"></p>
+        
+
+        <script>
+
+            var points = [1, 45, 68, 97, 28, 840, 2, 5, 67, 7];
+
+            function myFunction(num) {
+                return num * 10;
+
+            }
+
+            var array_1 = points.map(myFunction);
+            var arr = document.getElementById("result_1").innerHTML = array_1;
+
+            document.getElementById("result_2").innerHTML = arr;
+
+            function ascending(){
+                arr.sort(function(a, b) {
+                    return a - b;
+                });
+                document.getElementById("result_2").innerHTML = arr;
+            }
+
+            function descending(){
+                arr.sort(function(a, b) {
+                    return b - a;
+                });
+                document.getElementById("result_2").innerHTML = arr;
+            }
+
+            
+
+        </script>
+    </body>
+</html>
