@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h2></h2>
+        <p></p>
+        <p id="text">I like JavaScript, JavaScript is powerful</p>
+
+        <button onclick="searchText()">Search "JavaScript"</button>
+        <button onclick="replaceText()">Replace "JavaScript" with Python</button>
+
+        <p id="result"></p>
+
+        <script>
+            function searchText(){
+                var text = document.getElementById("text").innerHTML;
+
+                var position = text.search(/JavaScript/);
+
+                document.getElementById("result").innerHTML = "JavaScript is found at index: " + position;
+            }
+
+            function replaceText(){
+                var text = document.getElementById("text").innerHTML;
+
+                var newText = text.replace(/JavaScript/g, "Python");
+
+                document.getElementById("text").innerHTML = newText;
+
+                document.getElementById("result").innerHTML = "Text replaced successfully!";
+            }
+        </script>
+    </body>
+</html>
